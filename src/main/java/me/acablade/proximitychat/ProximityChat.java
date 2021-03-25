@@ -29,7 +29,11 @@ public final class ProximityChat extends JavaPlugin implements CommandExecutor {
         saveDefaultConfig();
         reloadConfig();
 
-        Logger.getLogger("Minecraft").info("The version of server is: "+getNMSVersion());
+        //Logger.getLogger("Minecraft").info("The version of server is: "+getNMSVersion());
+        if(Bukkit.getPluginManager().getPlugin("ProtocolLib")==null){
+            Logger.getLogger("Minecraft").info("ProtocolLib was not found disabling the plugin");
+            Bukkit.getPluginManager().disablePlugin(this);
+        }
         if(getNMSVersion().contains("1_16")) proximity = new Proximity_1_16();
         else proximity = new Proximity_1_8();
 
