@@ -5,7 +5,6 @@ import com.comphenix.protocol.events.PacketEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-import java.lang.reflect.Field;
 import java.util.UUID;
 
 public class Proximity_1_16 implements IProximity{
