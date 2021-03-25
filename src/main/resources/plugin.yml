@@ -1,0 +1,18 @@
+name: ProximityChat
+version: ${project.version}
+main: me.acablade.proximitychat.ProximityChat
+api-version: 1.13
+authors: [Acablade]
+description: Proximity chat
+commands:
+  proximitychat:
+    usage: /<command> [reload]
+    permission-message: Insufficient permissions
+    aliases:
+      - pc
+permissions:
+  pc.reload:
+    description: Allows you to reload the config of the plugin.
+    default: op
+depend:
+  - ProtocolLib
